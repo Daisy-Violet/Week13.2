@@ -1,18 +1,18 @@
 let a = prompt('Введите первую переменную', 'a');
 let b = prompt('Введите вторую переменную', 'b');
 
-function sum(a, b) {
-    alert(`${a + b}`);
+function sum() {
+    alert(`${+a + +b}`);
 }
 
-function subtraction(a, b) {
+function subtraction() {
     alert(`${a - b}`);
 }
 
-function multiplication(a, b) {
+function multiplication() {
     alert(`${a * b}`);
 }
 
-function division(a, b) {
+function division() {
     alert(`${a / b}`);
 }
