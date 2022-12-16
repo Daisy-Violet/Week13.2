@@ -1,18 +1,39 @@
-let a = prompt('Введите первую переменную', 'a');
-let b = prompt('Введите вторую переменную', 'b');
+const num1 = document.getElementById('num1');
+const num2 = document.getElementById('num2');
+const result = document.getElementById('result');
 
-function sum() {
-    alert(`${+a + +b}`);
+function clearInput() {
+    num1.value = ''
+    num2.value = ''
 }
 
+function sum() {
+    const imputValueFirst = num1.value;
+    const imputValueSecond = num2.value;
+    const sumResult = +imputValueFirst + +imputValueSecond;
+    result.innerHTML = sumResult;
+    clearInput()
+}
 function subtraction() {
-    alert(`${a - b}`);
+    const imputValueFirst = num1.value;
+    const imputValueSecond = num2.value;
+    const subResult = imputValueFirst - imputValueSecond;
+    result.innerHTML = subResult;
+    clearInput()
 }
 
 function multiplication() {
-    alert(`${a * b}`);
+    const imputValueFirst = num1.value;
+    const imputValueSecond = num2.value;
+    const multResult = imputValueFirst * imputValueSecond;
+    result.innerHTML = multResult;
+    clearInput()
 }
 
 function division() {
-    alert(`${a / b}`);
+    const imputValueFirst = num1.value;
+    const imputValueSecond = num2.value;
+    const divResult = imputValueFirst / imputValueSecond;
+    result.innerHTML = divResult;
+    clearInput()
 }
