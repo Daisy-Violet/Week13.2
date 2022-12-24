@@ -8,32 +8,25 @@ function clearInput() {
 }
 
 function sum() {
-    const imputValueFirst = num1.value;
-    const imputValueSecond = num2.value;
-    const sumResult = +imputValueFirst + +imputValueSecond;
-    result.innerHTML = sumResult;
+    result.innerHTML = +num1.value + +num2.value;
     clearInput()
 }
 function subtraction() {
-    const imputValueFirst = num1.value;
-    const imputValueSecond = num2.value;
-    const subResult = imputValueFirst - imputValueSecond;
-    result.innerHTML = subResult;
+    result.innerHTML = num1.value - num2.value;
     clearInput()
 }
 
 function multiplication() {
-    const imputValueFirst = num1.value;
-    const imputValueSecond = num2.value;
-    const multResult = imputValueFirst * imputValueSecond;
-    result.innerHTML = multResult;
+    result.innerHTML = num1.value * num2.value;
     clearInput()
 }
 
 function division() {
-    const imputValueFirst = num1.value;
-    const imputValueSecond = num2.value;
-    const divResult = imputValueFirst / imputValueSecond;
-    result.innerHTML = divResult;
+    if (num2.value == 0) {
+        result.innerHTML = "На ноль делить нельзя!";
+    }
+    else {
+        result.innerHTML = num1.value / num2.value;
+    }
     clearInput()
 }
